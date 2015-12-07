@@ -54,7 +54,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jessica's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2015/12/index.html">
 <meta property="og:site_name" content="Jessica's Blog">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -71,7 +71,7 @@
   };
 </script>
 
-  <title> Jessica's Blog </title>
+  <title> 歸檔 | Jessica's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -92,9 +92,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column  page-archive ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -171,121 +169,59 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
-    
+  <section id="posts" class="posts-collapse">
+    <span class="archive-move-on"></span>
 
-    
-    
+    <span class="archive-page-counter">
       
       
+      
         
-        
-        
+      
+      嗯..! 目前共計 2 篇文章。 繼續努力。
+    </span>
+
+    
+
+      
+      
       
 
       
-    
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/07/hexo搭建/" itemprop="url">
-                  hexo搭建
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-12-07T17:42:06+08:00" content="2015-12-07">
-              2015-12-07
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
+        <div class="collection-title">
+          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
       
       
 
       
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-          <span itemprop="articleBody">
-            
-              <p>上周学着自己搭建hexo博客，现在整理如下。</p>
-<p>首先，你要确保电脑上要已经安装了git和nodejs。</p>
-<h2 id="安装git">安装git</h2><p>git需要用homebrew安装，没有安装的朋友，可以</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby<span class="operator">-e</span><span class="string">"<span class="variable">$(curl-fsSLhttps://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
-<p>成功之后，<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">brew </span>install git</span><br></pre></td></tr></table></figure></p>
-<h2 id="安装node">安装node</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>://github.com/creationix/nvm.git \~/nvm</span><br></pre></td></tr></table></figure>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo ". <span class="command">\~</span>/.nvm/nvm.sh" <span class="command">\&gt;</span><span class="command">\&gt;</span> <span class="command">\~</span>/.bash<span class="command">\_</span>profile</span><br></pre></td></tr></table></figure>
-<p>在你的github上创建一个repo，name必须是你的ID.github.io噢！</p>
-<h2 id="开始Hexo搭建">开始Hexo搭建</h2><p>1.在命令行里输入</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo</span><br></pre></td></tr></table></figure>
-<p>2.接着在你想要的位置，进行初始化</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> hexo</span><br><span class="line"><span class="built_in">cd</span> hexo</span><br><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p>3.这个时候有个很重要的步骤，在_config.yml文件里配置你的部署环境，</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>:git<span class="variable">@github</span>.<span class="attribute">com</span>:wengjiaojiao/wengjiaojiao.github.io.git</span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
-<p>！！注意，很多地方现在都是<br><figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="typedef"><span class="keyword">type</span>:github</span></span><br></pre></td></tr></table></figure></p>
-<p>但是如果你的git版本较高，就要用之前的那段代码，否则它找不到你的库。</p>
-<p>4.大概的框架已经出来了，这时候你需要写新文章了<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">hexo</span> n <span class="string">"hexo test"</span></span><br></pre></td></tr></table></figure></p>
-<p>你就会在你的source下看到hexo test的文章，在里面用markdown语法编写。</p>
-<p>5.将生成静态页面至public目录<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">generate</span> <span class="comment">//也可简写成hexo g</span></span><br></pre></td></tr></table></figure></p>
-<p>6.最后将项目发布，部署到github就可以了<br><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo  deploy<span class="comment">//简写hexo d</span></span><br></pre></td></tr></table></figure></p>
-<p>！！注意，在整个过程中都不需要git push,那样只会将代码原样上传，不会生成hexo的结构。</p>
-
-            
-          </span>
+            <a class="post-title-link" href="/2015/12/07/hexo搭建/" itemprop="url">
+              
+                <span itemprop="name">hexo搭建</span>
+              
+            </a>
         
-      
-    </div>
+      </h1>
 
-    <footer class="post-footer">
-      
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2015-12-07T17:42:06+08:00"
+              content="2015-12-07" >
+          12-07
+        </time>
+      </div>
 
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+    </header>
   </article>
+
 
 
     
@@ -293,6 +229,7 @@
   </section>
 
   
+
 
 
         </div>
@@ -411,6 +348,12 @@
 
   
   
+  
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
+  
+
 
   
     
@@ -437,6 +380,12 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 
